@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "sdkVersion": "22.0.0",
+    "packagerOpts": {
+      "projectRoots": "",
+      "assetExts": ["ttf"],
+      "config": "rn-cli-config.js"
+   }
+  }
+}

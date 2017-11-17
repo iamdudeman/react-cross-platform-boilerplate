@@ -1,0 +1,39 @@
+{
+  "name": "react-cross-platform-boilerplate-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack -d --watch",
+    "shared-symlink": "../shared-symlink.sh",
+    "test": "node_modules/mocha/bin/mocha ./src/**/*.test.js --compilers js:babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/iamdudeman/small-retail-js.git"
+  },
+  "author": "Tim Solum",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/iamdudeman/small-retail-js#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-16": "^1.0.4",
+    "mocha": "^4.0.1",
+    "react-test-renderer": "^16.1.0",
+    "sinon": "^4.1.2",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  }
+}

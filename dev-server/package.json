@@ -1,0 +1,15 @@
+{
+  "name": "fake-backend",
+  "version": "1.0.0",
+  "description": "Fake Server for Small Retail",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Solum",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "nodeblues": "^1.1.0"
+  }
+}

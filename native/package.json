@@ -1,0 +1,44 @@
+{
+  "name": "react-cross-platform-boilerplate-native",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "private": true,
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "react-native-scripts start",
+    "test": "node node_modules/jest/bin/jest.js src",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/iamdudeman/small-retail-js.git"
+  },
+  "author": "Tim Solum",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/iamdudeman/small-retail-js#readme",
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "devDependencies": {
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-16": "^1.0.4",
+    "jest-expo": "^22.0.1",
+    "react-native-mock": "^0.3.1",
+    "react-native-scripts": "1.7.0",
+    "react-test-renderer": "16.0.0-beta.5",
+    "sinon": "^4.1.2"
+  },
+  "dependencies": {
+    "expo": "^22.0.2",
+    "react": "16.0.0-beta.5",
+    "react-dom": "^16.1.1",
+    "react-native": "^0.49.5",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  }
+}
