@@ -3,18 +3,17 @@ This is a simple counter application that runs on any platform! The majority of 
 
 
 # Current Progress
-### Functional
+### Features
 * Native development builds
 * Web development builds
 * Desktop reuses web bundle
-* Total dependencies after install 500mb
+* Local dev server hosting web application
 
 ### In Progress
 1. Desktop separated from web bundle
+1. True HMR for web dev
 
 ### TODO
-1. True HMR for web dev
-1. Local dev server hosting the web app
 1. Include PreStyle for CSS in JS for web and desktop
 1. Reuse dependencies where possible to reduce the 500mb size
 1. One testing framework for all platforms
@@ -28,12 +27,14 @@ This is a simple counter application that runs on any platform! The majority of 
     1. Actions calling dispatch
     1. Reusing containers
 1. JSDocs
+1. Add sonarwhal to web and desktop for accessibility linting
+1. Improve linting rules
 
 
 ## Setting up everything
 This will install all the modules for shared, desktop, native, and web as well as setting up some symlinks so we can have hot module reloading while developing.
 
-Note: This might take a minute or two. There is around 500mb of node_modules at the moment.
+Note: This might take awhile. There is around 500mb of node_modules at the moment.
 ```
 $ npm install
 ```
@@ -75,9 +76,11 @@ TODO
 Contains the views for our React Web application.
 
 ## Building for Dev
-Running this command will cause the web bundle to be rebuilt whenever anything in shared or web changes.
+Running this command will cause the web bundle to be rebuilt whenever anything in shared or web changes. You can
+then view the the site on "localhost:1337"
 ```
-$ npm run web:dev
+$ npm run web:dev     # leave this running for bundle.js build on file update
+$ npm run dev-server  # run this in another terminal
 ```
 ## Testing
 Runs tests in Mocha using Enyzme for shallow rendering.

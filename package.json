@@ -8,7 +8,7 @@
       "test": "test"
     },
     "scripts": {
-      "preinstall": "cd ./shared && npm install && cd ../desktop && npm install && cd ../native && npm install && cd ../web && npm install",
+      "preinstall": "cd ./shared && npm install && cd ../desktop && npm install && cd ../native && npm install && cd ../web && npm install &&  cd ../dev-server && npm install",
       "postinstall": "./create-shared-npm-link.sh",
 
       "native:dev": "cd ./native && npm run dev",
