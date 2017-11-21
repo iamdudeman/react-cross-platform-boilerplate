@@ -2,3 +2,4 @@ node_modules
 build
 .expo/
 npm-debug.*
+.DS_Store

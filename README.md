@@ -6,11 +6,13 @@ This is a simple counter application that runs on any platform! The majority of 
 ### Features
 * Native development builds
 * Web development builds
-* Desktop reuses web bundle
+* Desktop development builds
 * Local dev server hosting web application
 
 ### In Progress
-1. Desktop separated from web bundle
+1. Clean up Desktop npm scripts
+    1. Docs for desktop stuff
+    1. Prod build for desktop
 1. True HMR for web dev
 
 ### TODO
@@ -20,7 +22,6 @@ This is a simple counter application that runs on any platform! The majority of 
     1. Use enzyme and mocha for React Native testing if possible
 1. Prod build for web
 1. Prod build for native
-1. Prod build for desktop
 1. README.md docs for how some things are done
     1. Testing with Enzyme
     1. One store file

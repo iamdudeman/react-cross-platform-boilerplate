@@ -1,37 +1,33 @@
 {
-    "name": "react-cross-platform-boilerplate",
-    "version": "1.0.0",
-    "description": "",
-    "main": "",
-    "private": true,
-    "directories": {
-      "test": "test"
-    },
-    "scripts": {
-      "preinstall": "cd ./shared && npm install && cd ../desktop && npm install && cd ../native && npm install && cd ../web && npm install &&  cd ../dev-server && npm install",
-      "postinstall": "./create-shared-npm-link.sh",
-
-      "native:dev": "cd ./native && npm run dev",
-      "native:test": "cd ./native && npm run test",
-
-      "dev-server": "node ./dev-server/index.js",
-
-      "web:dev": "cd ./web && npm run dev",
-      "web:test": "cd ./web && npm run test",
-
-      "shared:test": "cd ./shared && npm run test"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+ssh://git@bitbucket.org/iamdudeman/small-retail-js.git"
-    },
-    "author": "Tim Solum",
-    "license": "ISC",
-    "homepage": "https://bitbucket.org/iamdudeman/small-retail-js#readme",
-    "devDependencies": {
-      "eslint": "^4.10.0",
-      "eslint-plugin-react": "^7.4.0"
-    },
-    "dependencies": {
-    }
+  "name": "react-cross-platform-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "private": true,
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "preinstall": "cd ./shared && npm install && cd ../desktop && npm install && cd ../native && npm install && cd ../web && npm install &&  cd ../dev-server && npm install",
+    "postinstall": "./create-shared-npm-link.sh",
+    "native:dev": "cd ./native && npm run dev",
+    "native:test": "cd ./native && npm run test",
+    "dev-server": "node ./dev-server/index.js",
+    "web:dev": "cd ./web && npm run dev",
+    "web:test": "cd ./web && npm run test",
+    "shared:test": "cd ./shared && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/iamdudeman/small-retail-js.git"
+  },
+  "author": "Tim Solum",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/iamdudeman/small-retail-js#readme",
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-plugin-react": "^7.4.0"
+  },
+  "dependencies": {
   }
+}
