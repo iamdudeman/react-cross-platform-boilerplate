@@ -4,24 +4,22 @@ This is a simple counter application that runs on any platform! The majority of 
 
 # Current Progress
 ### Features
-* Native development builds
-* Web development builds
-* Desktop development builds
+* Native development dev build
+* Web development dev build
+* Desktop development dev and prod builds
 * Local dev server hosting web application
 
 ### In Progress
-1. Clean up Desktop npm scripts
-    1. Docs for desktop stuff
-    1. Prod build for desktop
 1. True HMR for web dev
+1. True HMR for desktop dev
 
 ### TODO
-1. Include PreStyle for CSS in JS for web and desktop
 1. Reuse dependencies where possible to reduce the 500mb size
 1. One testing framework for all platforms
     1. Use enzyme and mocha for React Native testing if possible
 1. Prod build for web
 1. Prod build for native
+1. Include PreStyle for CSS in JS for web and desktop
 1. README.md docs for how some things are done
     1. Testing with Enzyme
     1. One store file
@@ -52,7 +50,7 @@ $ npm run shared:test
 
 
 # ./native
-Contains the views for the React Native application.
+Contains the views and npm scripts for the React Native application.
 
 ## Building for Dev
 Run the command below and download the Expo app for iPhone or Android. Once the QR code appears in your terminal simply scan it and you're good to go! Your app will reload whenever anything in shared or native changes.
@@ -74,7 +72,7 @@ TODO
 
 
 # ./web
-Contains the views for our React Web application.
+Contains the views and npm scripts for our React Web application.
 
 ## Building for Dev
 Running this command will cause the web bundle to be rebuilt whenever anything in shared or web changes. You can
@@ -95,13 +93,25 @@ TODO
 
 
 # ./desktop
-TODO: At the moment it lazily just reuses the JS bundle.
+Contains the views and npm scripts for our React Desktop application.
 
 ## Building for Dev
-TODO
+This will build the application on the platform you are running and open an instance of the application with
+the debug tools open. As you make changes you can "refresh" the application to load in changes.
+
+```
+$ npm run desktop:dev
+```
 
 ## Testing
-TODO
+```
+$ npm run desktop:test
+```
 
 ## Building for Prod
-TODO
+This creates a distributable for the platform that you are running the command on. You can find it in
+/desktop/out/make.
+
+```
+$ npm run desktop:prod
+```

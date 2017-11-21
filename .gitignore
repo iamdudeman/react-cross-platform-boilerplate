@@ -3,3 +3,5 @@ build
 .expo/
 npm-debug.*
 .DS_Store
+out
+make
