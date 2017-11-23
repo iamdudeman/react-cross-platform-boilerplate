@@ -4,9 +4,7 @@
   "description": "",
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "private": true,
-  "directories": {
-    "test": "test"
-  },
+  "directories": {},
   "scripts": {
     "dev": "react-native-scripts start",
     "test": "node node_modules/jest/bin/jest.js src",
@@ -14,13 +12,6 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/iamdudeman/small-retail-js.git"
-  },
-  "author": "Tim Solum",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/iamdudeman/small-retail-js#readme",
   "jest": {
     "preset": "jest-expo"
   },

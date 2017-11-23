@@ -5,6 +5,7 @@ const database = new NodeBlues.Database();
 const router = new NodeBlues.Router();
 const server = new NodeBlues.Server(router);
 
+
 router.get('/', (requestData, respondWith) => {
     fs.readFile('./web/index.html', 'utf8', (err, html) => {
         if (err) {
@@ -27,5 +28,5 @@ router.get('/bundle.js', (requestData, respondWith) => {
     });
 });
 
-server.start('localhost', '1337');
+server.start('localhost', 1337);
 console.log('Running on localhost:1337');

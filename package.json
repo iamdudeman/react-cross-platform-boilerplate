@@ -5,7 +5,6 @@
   "main": "",
   "private": true,
   "directories": {
-    "test": "test"
   },
   "scripts": {
     "desktop:dev": "cd ./desktop && npm run dev",
@@ -27,15 +26,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/iamdudeman/small-retail-js.git"
+    "url": "git+ssh://git@github.com/iamdudeman/react-cross-platform-boilerplate.git"
   },
   "author": "Tim Solum",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/iamdudeman/small-retail-js#readme",
+  "homepage": "https://github.com/iamdudeman/react-cross-platform-boilerplate#readme",
   "devDependencies": {
     "eslint": "^4.10.0",
     "eslint-plugin-react": "^7.4.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

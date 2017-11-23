@@ -4,13 +4,12 @@ This is a simple counter application that runs on any platform! The majority of 
 
 # Current Progress
 ### Features
-* Native development dev build
-* Web development dev build
+* Native development dev build with HMR
+* Web development dev build with HMR
 * Desktop development dev and prod builds
 * Local dev server hosting web application
 
 ### In Progress
-1. True HMR for web dev
 1. True HMR for desktop dev
 
 ### TODO

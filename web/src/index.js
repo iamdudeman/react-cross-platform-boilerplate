@@ -10,3 +10,7 @@ render(
     </Provider>,
     document.getElementById('root')
 );
+
+import { enableHMR } from 'nodeblues/browser';
+
+enableHMR('localhost', 1338);

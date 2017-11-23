@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const WebpackHMRPlugin = require('nodeblues/webpack').WebpackHMRPlugin;
 
 const BUILD_DIR = path.resolve(__dirname, '../build/web');
 const SRC_DIR = path.resolve(__dirname, './src');
@@ -22,7 +23,10 @@ const config = {
                 }
             }
         ]
-    }
+    },
+    plugins: [
+        new WebpackHMRPlugin('localhost', 1338)
+    ]
 };
 
 module.exports = config;
