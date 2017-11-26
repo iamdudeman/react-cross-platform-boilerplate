@@ -10,15 +10,18 @@ This is a simple counter application that runs on any platform! The majority of 
 * Local dev server hosting web application
 
 ### In Progress
-1. True HMR for desktop dev
+1. .editorconfig file
+1. Prod build for web
+    1. closure-webpack-plugin
 
 ### TODO
-1. Reuse dependencies where possible to reduce the 500mb size
-1. One testing framework for all platforms
-    1. Use enzyme and mocha for React Native testing if possible
-1. Prod build for web
 1. Prod build for native
+1. True HMR for desktop dev
+1. Reuse dependencies where possible to reduce the 500mb size
+    1. One testing framework for all platforms
+        1. Use enzyme and mocha for React Native testing if possible
 1. Include PreStyle for CSS in JS for web and desktop
+    1. PreStyle native?
 1. README.md docs for how some things are done
     1. Testing with Enzyme
     1. One store file
@@ -26,7 +29,9 @@ This is a simple counter application that runs on any platform! The majority of 
     1. Reusing containers
 1. JSDocs
 1. Add sonarwhal to web and desktop for accessibility linting
+1. Add bundle analyzer
 1. Improve linting rules
+1. Docker files for windows, linux, mac?
 
 
 ## Setting up everything
