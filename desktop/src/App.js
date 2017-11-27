@@ -7,8 +7,8 @@ import { Provider } from 'react-redux';
 const DesktopCounter = containers.CounterContainer(Counter);
 
 render(
-    <Provider store={store}>
-        <DesktopCounter />
-    </Provider>,
-    document.getElementById('root')
+  <Provider store={store}>
+    <DesktopCounter />
+  </Provider>,
+  document.getElementById('root')
 );

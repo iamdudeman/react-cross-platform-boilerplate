@@ -9,7 +9,6 @@
   "author": "Tim Solum",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^4.10.0",
     "nodeblues": "^1.1.0"
   }
 }

@@ -5,7 +5,7 @@ import Counter from './components/Counter';
 const WebCounter = containers.CounterContainer(Counter);
 
 const App = () => (
-    <WebCounter />
+  <WebCounter />
 );
 
 export default App;

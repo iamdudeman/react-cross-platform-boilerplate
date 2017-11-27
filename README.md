@@ -10,7 +10,6 @@ This is a simple counter application that runs on any platform! The majority of 
 * Local dev server hosting web application
 
 ### In Progress
-1. .editorconfig file
 1. Prod build for web
     1. closure-webpack-plugin
 

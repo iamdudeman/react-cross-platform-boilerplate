@@ -5,10 +5,10 @@ import { store } from 'shared';
 import App from './App';
 
 render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('root')
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
 );
 
 import { enableHMR } from 'nodeblues/browser';
