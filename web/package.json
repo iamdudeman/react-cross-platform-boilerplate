@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "./node_modules/.bin/webpack -d --watch",
+    "prod": "./node_modules/.bin/webpack -p --progress",
     "test": "node_modules/mocha/bin/mocha ./src/**/*.test.js --compilers js:babel-core/register"
   },
   "author": "Tim Solum",
