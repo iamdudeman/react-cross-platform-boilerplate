@@ -10,8 +10,8 @@ This is a simple counter application that runs on any platform! The majority of 
 * Local dev server hosting web application
 
 ### In Progress
-1. Prod build for web
-    1. closure-webpack-plugin
+1. Reuse react and redux dependencies for web and shared
+1. gzip
 
 ### TODO
 1. Prod build for native
@@ -28,7 +28,6 @@ This is a simple counter application that runs on any platform! The majority of 
     1. Reusing containers
 1. JSDocs
 1. Add sonarwhal to web and desktop for accessibility linting
-1. Add bundle analyzer
 1. Improve linting rules
 1. Docker files for windows, linux, mac?
 
@@ -91,7 +90,10 @@ $ npm run web:test
 ```
 
 ## Building for Prod
-TODO
+Running this command will uglify and minify the code. You can view the analyzed bundle at build/web/bundleAnalyzer.html
+```
+$ npm run web:prod
+```
 
 
 
