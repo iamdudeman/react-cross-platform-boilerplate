@@ -25,7 +25,7 @@ const plugins = [
   new webpack.optimize.ModuleConcatenationPlugin(),
   new HtmlWebpackPlugin({
     title: 'Counter',
-    template: './index.html',
+    template: './index.template.html',
     filename: 'index.html',
     inject: 'footer',
     minify: { collapseWhitespace: true }
