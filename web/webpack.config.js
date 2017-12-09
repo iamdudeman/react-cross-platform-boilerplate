@@ -1,4 +1,5 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 const WebpackHMRPlugin = require('nodeblues/webpack').WebpackHMRPlugin;
@@ -21,7 +22,14 @@ const plugins = [
       'NODE_ENV': isProduction ? '"production"' : '"development"'
     }
   }),
-  new webpack.optimize.ModuleConcatenationPlugin()
+  new webpack.optimize.ModuleConcatenationPlugin(),
+  new HtmlWebpackPlugin({
+    title: 'Counter',
+    template: './index.html',
+    filename: 'index.html',
+    inject: 'footer',
+    minify: { collapseWhitespace: true }
+  })
 ];
 const loaders = [
   {
@@ -61,7 +69,7 @@ const config = {
   },
   output: {
     path: BUILD_DIR,
-    filename: '[name].[hash].js'
+    filename: '[name]-[hash].js'
   },
   module: {
     loaders

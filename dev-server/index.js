@@ -5,25 +5,10 @@ const database = new NodeBlues.Database();
 const router = new NodeBlues.Router();
 const server = new NodeBlues.Server(router);
 
-function serveFile(route, pathToFile, mimeType) {
-  router.get(route, (requestData, respondWith) => {
-    fs.readFile(pathToFile, 'utf8', (err, html) => {
-      if (err) {
-        console.log(err);
-        respondWith(400, 'Something bad happened', 'text/plain');
-      } else {
-        respondWith(200, html, mimeType);
-      }
-    });
-  });
-}
-
-serveFile('/', './web/index.html', 'text/html');
-serveFile('/app.bundle.js', './build/web/app.bundle.js', 'application/javascript');
-serveFile('/vendor.bundle.js', './build/web/vendor.bundle.js', 'application/javascript');
-
 router.get('/:filename', (requestData, respondWith) => {
-  let pathToFile = `./build/web/${requestData.path.filename}`;
+  console.log(requestData.pathParams);
+
+  let pathToFile = `./build/web/${requestData.pathParams.filename || 'index.html'}`;
   let mimeType = pathToFile.endsWith('.js') ? 'application/javascript' : 'text/html';
 
   fs.readFile(pathToFile, 'utf8', (err, html) => {
