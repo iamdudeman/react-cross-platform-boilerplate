@@ -4,25 +4,19 @@
   "description": "",
   "main": "",
   "private": true,
-  "directories": {
-  },
+  "directories": {},
   "scripts": {
     "desktop:dev": "cd ./desktop && npm run dev",
     "desktop:prod": "cd ./desktop && npm run prod",
     "desktop:test": "cd ./desktop && npm run test",
-
     "dev-server": "node ./dev-server/index.js",
-
     "native:dev": "cd ./native && npm run dev",
     "native:test": "cd ./native && npm run test",
-
     "preinstall": "cd ./shared && npm install && cd ../desktop && npm install && cd ../native && npm install && cd ../web && npm install &&  cd ../dev-server && npm install",
     "postinstall": "./create-shared-npm-link.sh",
-
     "shared:test": "cd ./shared && npm run test",
-
     "web:dev": "cd ./web && npm run dev",
-    "web:prod": "cd ./web && npm run prod",
+    "web:prod": "rm -rf ./build/web && cd ./web && npm run prod",
     "web:test": "cd ./web && npm run test"
   },
   "repository": {

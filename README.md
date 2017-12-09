@@ -10,8 +10,7 @@ This is a simple counter application that runs on any platform! The majority of 
 * Local dev server hosting web application
 
 ### In Progress
-1. Reuse react and redux dependencies for web and shared
-1. gzip
+
 
 ### TODO
 1. Prod build for native

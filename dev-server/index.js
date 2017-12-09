@@ -5,25 +5,33 @@ const database = new NodeBlues.Database();
 const router = new NodeBlues.Router();
 const server = new NodeBlues.Server(router);
 
-
-router.get('/', (requestData, respondWith) => {
-  fs.readFile('./web/index.html', 'utf8', (err, html) => {
-    if (err) {
-      console.log(err);
-      respondWith(400, 'Something bad happened', 'text/plain');
-    } else {
-      respondWith(200, html, 'text/html');
-    }
+function serveFile(route, pathToFile, mimeType) {
+  router.get(route, (requestData, respondWith) => {
+    fs.readFile(pathToFile, 'utf8', (err, html) => {
+      if (err) {
+        console.log(err);
+        respondWith(400, 'Something bad happened', 'text/plain');
+      } else {
+        respondWith(200, html, mimeType);
+      }
+    });
   });
-});
+}
 
-router.get('/bundle.js', (requestData, respondWith) => {
-  fs.readFile('./build/web/bundle.js', 'utf8', (err, js) => {
+serveFile('/', './web/index.html', 'text/html');
+serveFile('/app.bundle.js', './build/web/app.bundle.js', 'application/javascript');
+serveFile('/vendor.bundle.js', './build/web/vendor.bundle.js', 'application/javascript');
+
+router.get('/:filename', (requestData, respondWith) => {
+  let pathToFile = `./build/web/${requestData.path.filename}`;
+  let mimeType = pathToFile.endsWith('.js') ? 'application/javascript' : 'text/html';
+
+  fs.readFile(pathToFile, 'utf8', (err, html) => {
     if (err) {
       console.log(err);
       respondWith(400, 'Something bad happened', 'text/plain');
     } else {
-      respondWith(200, js, 'application/javascript');
+      respondWith(200, html, mimeType);
     }
   });
 });

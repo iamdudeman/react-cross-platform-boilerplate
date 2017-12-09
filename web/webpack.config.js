@@ -1,36 +1,42 @@
-const webpack = require('webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
+const webpack = require('webpack');
 const WebpackHMRPlugin = require('nodeblues/webpack').WebpackHMRPlugin;
 
 const BUILD_DIR = path.resolve(__dirname, '../build/web');
 const SRC_DIR = path.resolve(__dirname, './src');
 
-const isProduction = process.argv.includes('-p');
-
 const ENTRY_FILE = SRC_DIR + '/index.js';
 
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const isProduction = process.argv.includes('-p');
 
 
-const plugins = [];
+const plugins = [
+  new webpack.optimize.CommonsChunkPlugin({
+    name: 'vendor',
+    minChunks: Infinity
+  }),
+  new webpack.DefinePlugin({
+    'process.env': {
+      'NODE_ENV': isProduction ? '"production"' : '"development"'
+    }
+  }),
+  new webpack.optimize.ModuleConcatenationPlugin()
+];
 const loaders = [
   {
-    test: /.js/,
+    test: /.jsx?/,
     include: [SRC_DIR, path.resolve(__dirname, '../shared/src')],
     loader: 'babel-loader',
-    exclude: '/node_modules/',
-    query: {
-      presets: [ 'es2015', 'react' ]
-    }
   }
 ];
 
+// Add production or dev specific plugins and loaders
 if (isProduction) {
   plugins.push(new BundleAnalyzerPlugin({
     analyzerMode: 'static',
     reportFilename: 'bundleAnalyzer.html',
-    defaultSizes: 'parsed',
-    openAnalyzer: true
+    defaultSizes: 'parsed'
   }));
 } else {
   loaders.push({
@@ -45,10 +51,17 @@ if (isProduction) {
 }
 
 const config = {
-  entry: ENTRY_FILE,
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    modules: [path.resolve(__dirname, 'node_modules')]
+  },
+  entry: {
+    app: ENTRY_FILE,
+    vendor: ['react', 'react-redux', 'redux', 'react-dom']
+  },
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
+    filename: '[name].[hash].js'
   },
   module: {
     loaders
@@ -57,20 +70,3 @@ const config = {
 };
 
 module.exports = config;
-
-/*
-https://github.com/webpack/webpack/issues/1643#issuecomment-342261535
-
-I got this to work by setting the includePaths but also by setting both resolve.root and resolveLoader.root to path.resolve(__dirname, 'node_modules') (or wherever you want those external sources to be able to resolve modules). @jraede I think that worked for you only because your include paths both had node_modules in an ancestor directory. You need to set both so files external to your project that you want to import can themselves (a) import other modules from your project's node_modules, and (b) so your loaders can be resolved (otherwise you get cannot resolve module 'babel', etc).
-
-
-  resolve: {
-    alias: { src: srcPath, common: commonPath },
-    extensions: ['', '.js', '.scss', '.json'],
-    root: [path.resolve(__dirname, 'node_modules')]
-  },
-
-  resolveLoader: {
-    root: [path.resolve(__dirname, 'node_modules')]
-  },
-*/
