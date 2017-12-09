@@ -9,6 +9,6 @@
   "author": "Tim Solum",
   "license": "ISC",
   "devDependencies": {
-    "nodeblues": "^1.1.0"
+    "nodeblues": "^1.3.1"
   }
 }

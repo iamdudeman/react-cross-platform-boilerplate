@@ -6,8 +6,6 @@ const router = new NodeBlues.Router();
 const server = new NodeBlues.Server(router);
 
 router.get('/:filename', (requestData, respondWith) => {
-  console.log(requestData.pathParams);
-
   let pathToFile = `./build/web/${requestData.pathParams.filename || 'index.html'}`;
   let mimeType = pathToFile.endsWith('.js') ? 'application/javascript' : 'text/html';
 
