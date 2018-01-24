@@ -10,8 +10,6 @@
     "prod:android": "node node_modules/exp/bin/exp.js build:android",
     "prod:ios": "node node_modules/exp/bin/exp.js build:ios",
     "test": "node node_modules/jest/bin/jest.js src",
-
-
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios"
