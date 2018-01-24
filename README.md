@@ -10,14 +10,13 @@ This is a simple counter application that runs on any platform! The majority of 
 * Local dev server hosting web application
 
 ### In Progress
-
-
-### TODO
 1. Prod build for native
-1. True HMR for desktop dev
 1. Reuse dependencies where possible to reduce the 500mb size
     1. One testing framework for all platforms
         1. Use enzyme and mocha for React Native testing if possible
+
+### TODO
+1. True HMR for desktop dev
 1. Include PreStyle for CSS in JS for web and desktop
     1. PreStyle native?
 1. README.md docs for how some things are done

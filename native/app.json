@@ -1,6 +1,16 @@
 {
   "expo": {
-    "sdkVersion": "22.0.0",
+    "name": "ReactCrossPlatform",
+    "slug": "ReactCrossPlatform",
+    "version": "1.0.0",
+    "ios": {
+      "bundleIdentifier": "me.solhub.reactcrossplatform"
+    },
+    "android": {
+      "package": "me.solhub.reactcrossplatform"
+    },
+
+    "sdkVersion": "25.0.0",
     "packagerOpts": {
       "projectRoots": "",
       "assetExts": ["ttf"],
