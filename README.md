@@ -11,6 +11,7 @@ This is a simple counter application that runs on any platform! The majority of 
 
 ### In Progress
 1. Prod build for native
+    1. Docs are a must here
 1. Reuse dependencies where possible to reduce the 500mb size
     1. One testing framework for all platforms
         1. Use enzyme and mocha for React Native testing if possible
