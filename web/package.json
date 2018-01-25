@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "./node_modules/.bin/webpack -d --watch",
     "prod": "./node_modules/.bin/webpack -p --progress",
-    "test": "node_modules/mocha/bin/mocha ./src/**/*.test.js --compilers js:babel-core/register"
+    "test": "../node_modules/mocha/bin/mocha ./src/**/*.test.js --compilers js:babel-core/register"
   },
   "author": "Tim Solum",
   "license": "ISC",
@@ -21,10 +21,8 @@
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.0",
     "html-webpack-plugin": "2.30.1",
-    "mocha": "4.0.1",
     "nodeblues": "1.3.1",
     "react-test-renderer": "16.2",
-    "sinon": "4.1.2",
     "webpack": "3.8.1",
     "webpack-bundle-analyzer": "2.9.1"
   },
