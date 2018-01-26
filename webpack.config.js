@@ -36,6 +36,10 @@ const loaders = [
     test: /.jsx?/,
     include: [SRC_DIR, path.resolve(__dirname, './shared/src')],
     loader: 'babel-loader',
+    options: {
+      presets: ['env', 'react'],
+      babelrc: false
+    }
   }
 ];
 

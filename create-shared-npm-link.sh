@@ -5,5 +5,3 @@ npm link
 cd ../native
 npm link shared
 
-cd ../desktop
-npm link shared
