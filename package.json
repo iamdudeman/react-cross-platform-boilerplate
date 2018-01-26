@@ -14,13 +14,12 @@
     "native:test": "cd ./native && npm run test",
     "preinstall": "cd ./shared && npm install && cd ../desktop && npm install && cd ../native && npm install &&  cd ../dev-server && npm install",
     "postinstall": "./create-shared-npm-link.sh",
-    "shared:test": "cd ./shared && npm run test",
-    "web:dev": "cd ./web && npm run dev",
-    "web:prod": "rm -rf ./build/web && cd ./web && npm run prod",
-    "web:test": "cd ./web && npm run test",
-    "dev": "./node_modules/.bin/webpack -d --watch",
-    "prod": "./node_modules/.bin/webpack -p --progress",
-    "test": "./node_modules/mocha/bin/mocha ./web/src/**/*.test.js --compilers js:babel-core/register"
+    "web:dev": "./node_modules/.bin/webpack -d --watch",
+    "web:prod": "rm -rf ./build/web && ./node_modules/.bin/webpack -p --progress",
+    "web:test": "./node_modules/mocha/bin/mocha ./web/src/**/*.test.js --compilers js:babel-core/register",
+
+    "shared:test": "./node_modules/mocha/bin/mocha ./shared/src/**/*.test.js --compilers js:babel-core/register"
+
   },
   "repository": {
     "type": "git",
