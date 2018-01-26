@@ -1,5 +1,6 @@
 {
   "expo": {
+    "entryPoint": "./native/App.js",
     "name": "ReactCrossPlatform",
     "slug": "ReactCrossPlatform",
     "version": "1.0.0",

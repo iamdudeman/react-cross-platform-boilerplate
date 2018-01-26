@@ -6,7 +6,7 @@ var config = {
       path.resolve(__dirname),
 
       // Include your forked package as a new root.
-      path.resolve(__dirname, '../shared')
+      path.resolve(__dirname, './shared')
     ];
   }
 };
