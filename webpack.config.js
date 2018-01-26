@@ -4,8 +4,8 @@ const path = require('path');
 const webpack = require('webpack');
 const WebpackHMRPlugin = require('nodeblues/webpack').WebpackHMRPlugin;
 
-const BUILD_DIR = path.resolve(__dirname, '../build/web');
-const SRC_DIR = path.resolve(__dirname, './src');
+const BUILD_DIR = path.resolve(__dirname, './build/web');
+const SRC_DIR = path.resolve(__dirname, './web/src');
 
 const ENTRY_FILE = SRC_DIR + '/index.js';
 
@@ -25,7 +25,7 @@ const plugins = [
   new webpack.optimize.ModuleConcatenationPlugin(),
   new HtmlWebpackPlugin({
     title: 'Counter',
-    template: './index.template.html',
+    template: './web/index.template.html',
     filename: 'index.html',
     inject: 'footer',
     minify: { collapseWhitespace: true }
@@ -34,7 +34,7 @@ const plugins = [
 const loaders = [
   {
     test: /.jsx?/,
-    include: [SRC_DIR, path.resolve(__dirname, '../shared/src')],
+    include: [SRC_DIR, path.resolve(__dirname, './shared/src')],
     loader: 'babel-loader',
   }
 ];
@@ -60,6 +60,9 @@ if (isProduction) {
 
 const config = {
   resolve: {
+    alias: {
+      shared: path.resolve(__dirname, 'shared')
+    },
     extensions: ['.js', '.jsx'],
     modules: [path.resolve(__dirname, 'node_modules')]
   },
