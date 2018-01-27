@@ -1,7 +1,7 @@
 import React from 'react';
-import Counter from './src/components/Counter';
+import Counter from './native/src/components/Counter';
 import { Provider } from 'react-redux';
-import { containers, store } from 'shared';
+import { containers, store } from './shared';
 
 const AppCounter = containers.CounterContainer(Counter);
 

@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "React Cross Platform",
+    "slug": "react-cross-platform",
+    "ios": {
+      "bundleIdentifier": "me.solhub.reactcrossplatform"
+    },
+    "android": {
+      "package": "me.solhub.reactcrossplatform"
+    },
+    "sdkVersion": "25.0.0"
+  }
+}

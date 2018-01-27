@@ -1,23 +1,26 @@
 {
   "name": "react-cross-platform-boilerplate",
+  "productName": "react-cross-platform-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "",
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "private": true,
   "directories": {},
   "scripts": {
-    "desktop:dev": "cd ./desktop && npm run dev",
-    "desktop:prod": "cd ./desktop && npm run prod",
-    "desktop:test": "cd ./desktop && npm run test",
+    "desktop:dev": "node node_modules/electron-forge/dist/forge.js start",
+    "desktop:prod": "node node_modules/electron-forge/dist/forge.js make",
+    "desktop:test": "./node_modules/mocha/bin/mocha ./desktop/src/**/*.test.js --compilers js:babel-core/register",
     "dev-server": "node ./dev-server/index.js",
-    "native:dev": "cd ./native && npm run dev",
-    "native:test": "cd ./native && npm run test",
-    "preinstall": "cd ./shared && npm install && cd ../desktop && npm install && cd ../native && npm install && cd ../web && npm install &&  cd ../dev-server && npm install",
-    "postinstall": "./create-shared-npm-link.sh",
-    "shared:test": "cd ./shared && npm run test",
-    "web:dev": "cd ./web && npm run dev",
-    "web:prod": "rm -rf ./build/web && cd ./web && npm run prod",
-    "web:test": "cd ./web && npm run test"
+    "native:dev": "react-native-scripts start",
+    "native:prod:android": "node node_modules/exp/bin/exp.js build:android",
+    "native:prod:ios": "node node_modules/exp/bin/exp.js build:ios",
+    "native:test": "node node_modules/jest/bin/jest.js native/src",
+    "native:android": "#react-native-scripts android",
+    "native:ios": "#react-native-scripts ios",
+    "shared:test": "./node_modules/mocha/bin/mocha ./shared/src/**/*.test.js --compilers js:babel-core/register",
+    "web:dev": "./node_modules/.bin/webpack -d --watch",
+    "web:prod": "rm -rf ./build/web && ./node_modules/.bin/webpack -p --progress",
+    "web:test": "./node_modules/mocha/bin/mocha ./web/src/**/*.test.js --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -27,10 +30,77 @@
   "license": "ISC",
   "homepage": "https://github.com/iamdudeman/react-cross-platform-boilerplate#readme",
   "devDependencies": {
+    "@babel/core": "7.0.0-beta.34",
+    "@babel/preset-env": "7.0.0-beta.34",
+    "@babel/preset-react": "7.0.0-beta.34",
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-plugin-transform-async-to-generator": "6.24.1",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-expo": "4.0.0",
+    "babel-preset-react": "6.24.1",
+    "electron-compile": "6.4.2",
+    "electron-forge": "4.2.0",
+    "electron-prebuilt-compile": "1.7.11",
+    "electron-squirrel-startup": "1.0.0",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
     "eslint": "4.16.0",
     "eslint-plugin-react": "7.5.1",
+    "exp": "49.0.1",
+    "html-webpack-plugin": "2.30.1",
+    "jest-expo": "25.0.0",
     "mocha": "4.0.1",
-    "sinon": "4.1.2"
+    "nodeblues": "1.3.1",
+    "react-native-scripts": "1.11.1",
+    "react-test-renderer": "16.2.0",
+    "sinon": "4.1.2",
+    "webpack": "3.8.1",
+    "webpack-bundle-analyzer": "2.9.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "expo": "25.0.0",
+    "prop-types": "15.6.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-native": "0.52.0",
+    "react-redux": "5.0.6",
+    "redux": "3.7.2"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm"
+      },
+      "electronWinstallerConfig": {
+        "name": "react-cross-platform-boilerplate"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "react-cross-platform-boilerplate"
+      }
+    }
+  }
 }
