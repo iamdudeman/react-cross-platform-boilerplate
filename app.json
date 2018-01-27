@@ -1,21 +1,13 @@
 {
   "expo": {
-    "entryPoint": "./native/App.js",
-    "name": "ReactCrossPlatform",
-    "slug": "ReactCrossPlatform",
-    "version": "1.0.0",
+    "name": "React Cross Platform",
+    "slug": "react-cross-platform",
     "ios": {
       "bundleIdentifier": "me.solhub.reactcrossplatform"
     },
     "android": {
       "package": "me.solhub.reactcrossplatform"
     },
-
-    "sdkVersion": "25.0.0",
-    "packagerOpts": {
-      "projectRoots": "",
-      "assetExts": ["ttf"],
-      "config": "rn-cli-config.js"
-   }
+    "sdkVersion": "25.0.0"
   }
 }
