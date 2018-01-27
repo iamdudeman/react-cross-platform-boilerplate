@@ -1,6 +1,7 @@
 # React.js Cross Platform Boilerplate
 This is a simple counter application that runs on any platform! The majority of the code is reused between platforms with the view components and entry points being the exception.
 
+NOTE: This is currently being developed to be easy to use. While the basic funcionality should be working it should be used with caution for the time being.
 
 # Current Progress
 ### Features
@@ -12,19 +13,18 @@ This is a simple counter application that runs on any platform! The majority of 
 ### In Progress
 1. Prod build for native
     1. Docs are a must here
-1. Reuse dependencies where possible to reduce the 500mb size
-    1. One testing framework for all platforms
-        1. Use enzyme and mocha for React Native testing if possible
+1. One testing framework for all platforms
+    1. Use enzyme and mocha for React Native testing if possible
 
 ### TODO
-1. True HMR for desktop dev
-1. Include PreStyle for CSS in JS for web and desktop
-    1. PreStyle native?
 1. README.md docs for how some things are done
     1. Testing with Enzyme
     1. One store file
     1. Actions calling dispatch
     1. Reusing containers
+1. True HMR for desktop dev
+1. Include PreStyle for CSS in JS for web and desktop
+    1. PreStyle native?
 1. JSDocs
 1. Add sonarwhal to web and desktop for accessibility linting
 1. Improve linting rules
@@ -32,9 +32,9 @@ This is a simple counter application that runs on any platform! The majority of 
 
 
 ## Setting up everything
-This will install all the modules for shared, desktop, native, and web as well as setting up some symlinks so we can have hot module reloading while developing.
+This will install all the modules we need for each platform.
 
-Note: This might take awhile. There is around 500mb of node_modules at the moment.
+Note: This might take awhile. There is around 750mb of node_modules at the moment.
 ```
 $ npm install
 ```
@@ -79,8 +79,8 @@ Contains the views and npm scripts for our React Web application.
 Running this command will cause the web bundle to be rebuilt whenever anything in shared or web changes. You can
 then view the the site on "localhost:1337"
 ```
+$ npm run dev-server  # run this in another terminal first
 $ npm run web:dev     # leave this running for bundle.js build on file update
-$ npm run dev-server  # run this in another terminal
 ```
 ## Testing
 Runs tests in Mocha using Enyzme for shallow rendering.
