@@ -1,12 +1,8 @@
+import { shallow } from 'enzyme';
 import assert from 'assert';
 import Counter from './Counter';
-import Enzyme, { shallow } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
-
-import Adapter from 'enzyme-adapter-react-16';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 describe('Counter', () => {
 

@@ -1,5 +1,5 @@
+import * as countActions from '../actions/count';
 import { connect } from 'react-redux';
-import { countActions } from '../actions';
 
 const mapStateToProps = state => {
   return {

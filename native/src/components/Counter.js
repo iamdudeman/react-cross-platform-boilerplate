@@ -1,6 +1,6 @@
-import React from 'react';
 import { Button, Text, View, StatusBar } from 'react-native';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 const Counter = ({ count, onClickIncrement, onClickDecrement, onClickReset}) => (
   <View>

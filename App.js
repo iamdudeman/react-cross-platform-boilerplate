@@ -1,9 +1,10 @@
 import React from 'react';
 import Counter from './native/src/components/Counter';
 import { Provider } from 'react-redux';
-import { containers, store } from './shared';
+import store from './shared/src/store';
+import CounterContainer from './shared/src/containers/CounterContainer';
 
-const AppCounter = containers.CounterContainer(Counter);
+const AppCounter = CounterContainer(Counter);
 
 export default class App extends React.Component {
   render() {

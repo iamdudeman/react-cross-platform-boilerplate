@@ -1,10 +1,11 @@
-import React from 'react';
-import { containers, store } from '../../shared';
-import Counter from './components/Counter';
-import { render } from 'react-dom';
 import { Provider } from 'react-redux';
+import { render } from 'react-dom';
+import CounterContainer from '../../shared/src/containers/CounterContainer';
+import Counter from './components/Counter';
+import React from 'react';
+import store from '../../shared/src/store';
 
-const DesktopCounter = containers.CounterContainer(Counter);
+const DesktopCounter = CounterContainer(Counter);
 
 render(
   <Provider store={store}>
