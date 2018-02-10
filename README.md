@@ -13,29 +13,28 @@ NOTE: This is currently being developed to be easy to use. While the basic funci
 
 # Current Progress
 ### In Progress
-1. Docs
-    1. shared
-        1. one store file
-        1. actions calling dispatch
-        1. Reusing containers
-    1. testing
-        1. enzyme
-        1. actions
-        1. reducers
-        1. no need for containers
-    1. Production native android/ios
-    1. web dev
-    1. web prod
-    1. desktop dev
-    1. desktop prod
-    1. Docs are a must here
+1. readme Docs
+    1. native
+      1. dev
+      1. prod android
+      1. prod ios
+      1. testing
+    1. web
+      1. dev
+      1. prod
+      1. testing
+    1. desktop
+      1. dev
+      1. prod
+      1. testing
+    1. Update README to point to sub files
 
 ### TODO
 1. True HMR for desktop dev
 1. Include PreStyle for CSS in JS for web and desktop
     1. PreStyle native?
-1. JSDocs
 1. Add sonarwhal to web and desktop for accessibility linting
+1. JSDocs
 1. Improve linting rules
 1. Docker files for windows, linux, mac?
 
