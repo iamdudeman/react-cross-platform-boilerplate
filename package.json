@@ -7,20 +7,21 @@
   "private": true,
   "directories": {},
   "scripts": {
+    "all:test": "./node_modules/mocha/bin/mocha ./testConfig.js --compilers js:babel-core/register",
     "desktop:dev": "node node_modules/electron-forge/dist/forge.js start",
     "desktop:prod": "node node_modules/electron-forge/dist/forge.js make",
-    "desktop:test": "./node_modules/mocha/bin/mocha ./desktop/src/**/*.test.js --compilers js:babel-core/register",
+    "desktop:test": "./node_modules/mocha/bin/mocha ./desktop/src/testConfig.js --compilers js:babel-core/register",
     "dev-server": "node ./dev-server/index.js",
     "native:dev": "react-native-scripts start",
     "native:prod:android": "node node_modules/exp/bin/exp.js build:android",
     "native:prod:ios": "node node_modules/exp/bin/exp.js build:ios",
-    "native:test": "node node_modules/jest/bin/jest.js native/src",
+    "native:test": "node node_modules/jest/bin/jest.js native/src/testConfig.js",
     "native:android": "#react-native-scripts android",
     "native:ios": "#react-native-scripts ios",
-    "shared:test": "./node_modules/mocha/bin/mocha ./shared/src/**/*.test.js --compilers js:babel-core/register",
+    "shared:test": "./node_modules/mocha/bin/mocha ./shared/src/testConfig.js --compilers js:babel-core/register",
     "web:dev": "./node_modules/.bin/webpack -d --watch",
     "web:prod": "rm -rf ./build/web && ./node_modules/.bin/webpack -p --progress",
-    "web:test": "./node_modules/mocha/bin/mocha ./web/src/**/*.test.js --compilers js:babel-core/register"
+    "web:test": "./node_modules/mocha/bin/mocha ./web/src/testConfig.js --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",

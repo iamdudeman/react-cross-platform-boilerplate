@@ -1,5 +1,5 @@
-import count from './count';
 import assert from 'assert';
+import count from './count';
 
 describe('count reducer', () => {
   it('should increment', () => {
