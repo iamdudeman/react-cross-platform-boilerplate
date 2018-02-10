@@ -34,6 +34,8 @@ export const decrement = () => {
 Testing actions is pretty straight forward. Simply mock the dispatch on store using sinon and check that the data is passed through dispatch as expected.
 
 ```js
+import assert from 'assert';
+
 describe('decrement', () => {
   it('should dispatch DECREMENT_COUNT', () => {
     count.decrement();
@@ -78,6 +80,8 @@ const reducers = combineReducers({
 Testing reducers is also straight forward. Call the reducer function with the object you would like to test and ensure that the returned state is as expected.
 
 ```js
+import assert from 'assert';
+
 describe('count reducer', () => {
   it('should increment', () => {
     let result = count(0, {type: 'INCREMENT_COUNT'});
@@ -124,7 +128,7 @@ export default CounterContainer;
 Containers are not tested in this project since they are essentially covered by React PropTypes on the bound presentational component.
 
 ## Running Tests
-Tests can be run with two different commands below. To add a new test to the shared test suite simply require it in the shared/testConfig.js file.
+Tests can be run with two different commands below. To add a new test to the shared test suite simply require it in the shared/testConfig.js file. The tests are all run through Jest.
 
 ```
 # Runs only tests defined in shared/testConfig.js

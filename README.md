@@ -20,11 +20,6 @@ NOTE: This is currently being developed to be easy to use. While the basic funci
       1. prod android
       1. prod ios
       1. testing
-    1. web
-      1. file list
-      1. dev
-      1. prod
-      1. testing
     1. desktop
       1. file list
       1. dev
