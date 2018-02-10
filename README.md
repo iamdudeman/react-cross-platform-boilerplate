@@ -15,27 +15,33 @@ NOTE: This is currently being developed to be easy to use. While the basic funci
 ### In Progress
 1. readme Docs
     1. native
+      1. file list
       1. dev
       1. prod android
       1. prod ios
       1. testing
     1. web
+      1. file list
       1. dev
       1. prod
       1. testing
     1. desktop
+      1. file list
       1. dev
       1. prod
       1. testing
+    1. dev-server
+      1. Reference nodeblues?
     1. Update README to point to sub files
 
 ### TODO
-1. True HMR for desktop dev
 1. Include PreStyle for CSS in JS for web and desktop
     1. PreStyle native?
-1. Add sonarwhal to web and desktop for accessibility linting
 1. JSDocs
 1. Improve linting rules
+  1. command to lint whole project
+1. Add sonarwhal to web and desktop for accessibility linting
+1. True HMR for desktop dev
 1. Docker files for windows, linux, mac?
 
 
