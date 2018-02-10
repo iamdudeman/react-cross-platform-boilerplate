@@ -6,15 +6,14 @@ NOTE: This is currently being developed to be easy to use. While the basic funci
 # Current Progress
 ### Features
 * Native development dev build with HMR
-* Web development dev build with HMR
+* Web development dev build with auto page refresh on change
 * Desktop development dev and prod builds
 * Local dev server hosting web application
+* Uniform testing framework across all platforms
 
 ### In Progress
 1. Prod build for native
     1. Docs are a must here
-1. One testing framework for all platforms
-    1. Use enzyme and mocha for React Native testing if possible
 
 ### TODO
 1. README.md docs for how some things are done
@@ -44,7 +43,7 @@ $ npm install
 Contains all the logic we will be sharing across our platforms. This includes our actions, reducers, containers, and the store.
 
 ## Tests
-Tests run in mocha.
+Tests run in Jest.
 ```
 $ npm run shared:test
 ```
@@ -83,7 +82,7 @@ $ npm run dev-server  # run this in another terminal first
 $ npm run web:dev     # leave this running for bundle.js build on file update
 ```
 ## Testing
-Runs tests in Mocha using Enyzme for shallow rendering.
+Runs tests in Jest using Enyzme for shallow rendering.
 ```
 $ npm run web:test
 ```
