@@ -3,24 +3,34 @@ This is a simple counter application that runs on any platform! The majority of 
 
 NOTE: This is currently being developed to be easy to use. While the basic funcionality should be working it should be used with caution for the time being.
 
-# Current Progress
 ### Features
-* Native development dev build with HMR
+* Native application development dev build with HMR
 * Web development dev build with auto page refresh on change
 * Desktop development dev and prod builds
 * Local dev server hosting web application
 * Uniform testing framework across all platforms
 
+
+# Current Progress
 ### In Progress
-1. Prod build for native
+1. Docs
+    1. shared
+        1. one store file
+        1. actions calling dispatch
+        1. Reusing containers
+    1. testing
+        1. enzyme
+        1. actions
+        1. reducers
+        1. no need for containers
+    1. Production native android/ios
+    1. web dev
+    1. web prod
+    1. desktop dev
+    1. desktop prod
     1. Docs are a must here
 
 ### TODO
-1. README.md docs for how some things are done
-    1. Testing with Enzyme
-    1. One store file
-    1. Actions calling dispatch
-    1. Reusing containers
 1. True HMR for desktop dev
 1. Include PreStyle for CSS in JS for web and desktop
     1. PreStyle native?
