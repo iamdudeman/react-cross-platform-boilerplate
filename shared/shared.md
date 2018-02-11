@@ -122,6 +122,16 @@ const CounterContainer = connect(
 export default CounterContainer;
 ```
 
+#### Consuming Containers
+To consume a container component just pass in the desired presentational component into the container as a function argument. The presentational component will now have access to all the props passed in via mapStateToProps and mapDispatchToProps.
+
+```js
+import CounterContainer from 'shared/src/containers/CounterContainer';
+import Counter from 'web/src/components/Counter';
+
+const WebCounter = CounterContainer(Counter);
+const renderedCounter = <WebCounter />;
+```
 
 
 #### Testing Containers
