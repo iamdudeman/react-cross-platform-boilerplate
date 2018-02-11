@@ -33,7 +33,7 @@ npm run native:dev
 ```
 Download the Expo app from the marketplace and then scan the barcode that is shown. Once the app loads on the device whenever you make a change in native or shared the app will automatically reload. Sometimes it does take a couple saves before the changes apply.
 
-The test device and the computer running the dev build must be on the same network for it to work. Port forwarding may have to be done if it doesn't seem to be working.
+Note: The test device and the computer running the dev build must be on the same network for it to work. You will need to allow ports 19000 and 19001 through your firewall on your computer
 
 
 
@@ -73,4 +73,9 @@ it('should render count', () => {
 
   assert.ok(wrapper.contains(<Text>Count: 1</Text>));
 });
+```
+
+Run tests via
+```
+npm run native:test
 ```

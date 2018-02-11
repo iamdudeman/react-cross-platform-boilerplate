@@ -19,12 +19,22 @@ Desktop contains all the presentational components for building desktop applicat
 
 
 ## Dev
-TODO
+This will build the application on the platform you are running and open an instance of the application with
+the debug tools open. As you make changes you can "refresh" the application to load in changes.
+
+```
+$ npm run desktop:dev
+```
 
 
 
 ## Prod
-TODO
+This creates a distributable for the platform that you are running the command on. You can find it in
+/desktop/out/make.
+
+```
+$ npm run desktop:prod
+```
 
 
 
@@ -43,4 +53,9 @@ it('should render count', () => {
 
   assert.ok(wrapper.contains(<span>Count: 1</span>));
 });
+```
+
+Run tests via
+```
+npm run desktop:test
 ```

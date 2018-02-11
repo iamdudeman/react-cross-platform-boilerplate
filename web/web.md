@@ -57,3 +57,8 @@ it('should render count', () => {
   assert.ok(wrapper.contains(<span>Count: 1</span>));
 });
 ```
+
+Run tests via
+```
+npm run web:test
+```

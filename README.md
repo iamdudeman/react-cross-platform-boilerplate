@@ -3,6 +3,7 @@ This is a simple counter application that runs on any platform! The majority of 
 
 NOTE: This is currently being developed to be easy to use. While the basic funcionality should be working it should be used with caution for the time being.
 
+
 ### Features
 * Native application development dev build with HMR
 * Web development dev build with auto page refresh on change
@@ -11,23 +12,27 @@ NOTE: This is currently being developed to be easy to use. While the basic funci
 * Uniform testing framework across all platforms
 
 
+
+## Setting up everything
+This will install all the modules we need for each platform.
+
+Note: This might take awhile. There is around 750mb of node_modules at the moment.
+```
+$ npm install
+```
+
+
+## Quick docs links
+* [Shared docs](./shared/shared.md)
+* [Web docs](./web/web.md)
+* [Native docs](./native/native.md)
+* [Desktop docs](./desktop/desktop.md)
+
+
+
 # Current Progress
 ### In Progress
-1. readme Docs
-    1. native
-      1. file list
-      1. dev
-      1. prod android
-      1. prod ios
-      1. testing
-    1. desktop
-      1. file list
-      1. dev
-      1. prod
-      1. testing
-    1. dev-server
-      1. Reference nodeblues?
-    1. Update README to point to sub files
+*
 
 ### TODO
 1. Include PreStyle for CSS in JS for web and desktop
@@ -40,91 +45,6 @@ NOTE: This is currently being developed to be easy to use. While the basic funci
 1. Docker files for windows, linux, mac?
 
 
-## Setting up everything
-This will install all the modules we need for each platform.
-
-Note: This might take awhile. There is around 750mb of node_modules at the moment.
-```
-$ npm install
-```
-
-
-# ./shared
-Contains all the logic we will be sharing across our platforms. This includes our actions, reducers, containers, and the store.
-
-## Tests
-Tests run in Jest.
-```
-$ npm run shared:test
-```
-
-
-# ./native
-Contains the views and npm scripts for the React Native application.
-
-## Building for Dev
-Run the command below and download the Expo app for iPhone or Android. Once the QR code appears in your terminal simply scan it and you're good to go! Your app will reload whenever anything in shared or native changes.
-
-Note: You will need to allow ports 19000 and 19001 through your firewall on your computer.
-```
-$ npm run native:dev
-```
-
-## Tests
-Tests run in Jest and use Enzyme for shallow rendering.
-```
-$ npm run native:test
-```
-
-## Building for Prod
-TODO
 
 
 
-# ./web
-Contains the views and npm scripts for our React Web application.
-
-## Building for Dev
-Running this command will cause the web bundle to be rebuilt whenever anything in shared or web changes. You can
-then view the the site on "localhost:1337"
-```
-$ npm run dev-server  # run this in another terminal first
-$ npm run web:dev     # leave this running for bundle.js build on file update
-```
-## Testing
-Runs tests in Jest using Enyzme for shallow rendering.
-```
-$ npm run web:test
-```
-
-## Building for Prod
-Running this command will uglify and minify the code. You can view the analyzed bundle at build/web/bundleAnalyzer.html
-```
-$ npm run web:prod
-```
-
-
-
-# ./desktop
-Contains the views and npm scripts for our React Desktop application.
-
-## Building for Dev
-This will build the application on the platform you are running and open an instance of the application with
-the debug tools open. As you make changes you can "refresh" the application to load in changes.
-
-```
-$ npm run desktop:dev
-```
-
-## Testing
-```
-$ npm run desktop:test
-```
-
-## Building for Prod
-This creates a distributable for the platform that you are running the command on. You can find it in
-/desktop/out/make.
-
-```
-$ npm run desktop:prod
-```
