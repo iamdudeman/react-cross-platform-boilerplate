@@ -65,7 +65,7 @@ if (isProduction) {
 const config = {
   resolve: {
     alias: {
-      shared: path.resolve(__dirname, 'shared')
+      shared: path.resolve(__dirname, 'shared/src')
     },
     extensions: ['.js', '.jsx'],
     modules: [path.resolve(__dirname, 'node_modules')]

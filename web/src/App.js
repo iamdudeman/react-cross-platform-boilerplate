@@ -1,4 +1,4 @@
-import CounterContainer from 'shared/src/containers/CounterContainer';
+import CounterContainer from 'shared/containers/CounterContainer';
 import Counter from './components/Counter';
 import React from 'react';
 
