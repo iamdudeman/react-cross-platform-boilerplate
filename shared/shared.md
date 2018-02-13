@@ -7,7 +7,7 @@ Shared is where all of the code that can be reused across platforms exists. This
 The store is where all of the reducers are combined for a unified export that can be used for the react-redux Provider.
 
 ```jsx
-import { store } from 'shared/src/store';
+import { store } from 'shared/store';
 import App from './App';
 
 <Provider store={store}>
@@ -126,7 +126,7 @@ export default CounterContainer;
 To consume a container component just pass in the desired presentational component into the container as a function argument. The presentational component will now have access to all the props passed in via mapStateToProps and mapDispatchToProps.
 
 ```js
-import CounterContainer from 'shared/src/containers/CounterContainer';
+import CounterContainer from 'shared/containers/CounterContainer';
 import Counter from 'web/src/components/Counter';
 
 const WebCounter = CounterContainer(Counter);

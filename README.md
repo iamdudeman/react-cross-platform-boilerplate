@@ -32,7 +32,7 @@ $ npm install
 
 # Current Progress
 ### In Progress
-*
+* desktop alias "shared" to "shared/src"
 
 ### TODO
 1. Include PreStyle for CSS in JS for web and desktop
