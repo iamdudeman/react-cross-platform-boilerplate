@@ -32,12 +32,11 @@ $ npm install
 
 # Current Progress
 ### In Progress
-* desktop alias "shared" to "shared/src"
+* JSDocs
 
 ### TODO
 1. Include PreStyle for CSS in JS for web and desktop
     1. PreStyle native?
-1. JSDocs
 1. Improve linting rules
   1. command to lint whole project
 1. Add sonarwhal to web and desktop for accessibility linting
