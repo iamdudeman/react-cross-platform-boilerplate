@@ -15,6 +15,7 @@ Desktop contains all the presentational components for building desktop applicat
 
 ## Special Notes
 * If you are using a unix subsystem on windows the build will not work since gui elements do not exist. The builds will have to be run elsewhere.
+* By default index.js is used in root but can be overridden in "main" of the "package.json"
 
 
 

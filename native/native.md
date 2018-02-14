@@ -16,12 +16,12 @@ Native contains all the presentational components for building native ios and an
   * Note: Needs to be in the root directory so it can be found
 * app.json
   * Defines some properties for the app
+  * entryPoint should be left as "./node_modules/react-native-scripts/build/bin/crna-entry.js"
   * Note: Needs to be in the root directory so it can be found
 
 
 
 ## Special Notes
-* main in package.json needs to be set to "./node_modules/react-native-scripts/build/bin/crna-entry.js"
 * expo must be a dependency instead of devDependency
 
 

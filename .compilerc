@@ -14,7 +14,12 @@
           "react"
         ],
         "plugins": [
-          "transform-async-to-generator"
+          "transform-async-to-generator",
+          ["module-resolver", {
+            "alias": {
+              "shared": "./shared/src"
+            }
+          }]
         ],
         "sourceMaps": "inline"
       }
@@ -33,7 +38,12 @@
           "react"
         ],
         "plugins": [
-          "transform-async-to-generator"
+          "transform-async-to-generator",
+          ["module-resolver", {
+            "alias": {
+              "shared": "./shared/src"
+            }
+          }]
         ],
         "sourceMaps": "none"
       }

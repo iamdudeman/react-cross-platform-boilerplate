@@ -3,7 +3,6 @@
   "productName": "react-cross-platform-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "private": true,
   "directories": {},
   "scripts": {

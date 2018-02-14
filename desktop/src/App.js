@@ -1,9 +1,9 @@
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
-import CounterContainer from '../../shared/src/containers/CounterContainer';
+import CounterContainer from 'shared/containers/CounterContainer';
 import Counter from './components/Counter';
 import React from 'react';
-import store from '../../shared/src/store';
+import { store } from 'shared/store';
 
 const DesktopCounter = CounterContainer(Counter);
 
