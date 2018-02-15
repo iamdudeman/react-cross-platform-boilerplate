@@ -32,13 +32,13 @@ $ npm install
 
 # Current Progress
 ### In Progress
-* JSDocs
+1. Improve linting rules
+  1. command to lint whole project
+  1. commands for each platform
 
 ### TODO
 1. Include PreStyle for CSS in JS for web and desktop
     1. PreStyle native?
-1. Improve linting rules
-  1. command to lint whole project
 1. Add sonarwhal to web and desktop for accessibility linting
 1. True HMR for desktop dev
 1. Docker files for windows, linux, mac?
