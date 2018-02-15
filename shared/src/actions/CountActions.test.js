@@ -1,9 +1,9 @@
-import * as count from './count';
+import * as CountActions from './CountActions';
 import * as store from '../store';
 import assert from 'assert';
 import sinon from 'sinon';
 
-describe('count actions', () => {
+describe('CountActions', () => {
   let sandbox = sinon.sandbox.create();
 
   beforeEach(() => {
@@ -16,7 +16,7 @@ describe('count actions', () => {
 
   describe('decrement', () => {
     it('should dispatch DECREMENT_COUNT', () => {
-      count.decrement();
+      CountActions.decrement();
 
       assert.ok(store.dispatch.calledWith({
         type: 'DECREMENT_COUNT'
@@ -26,7 +26,7 @@ describe('count actions', () => {
 
   describe('increment', () => {
     it('should dispatch INCREMENT_COUNT', () => {
-      count.increment();
+      CountActions.increment();
 
       assert.ok(store.dispatch.calledWith({
         type: 'INCREMENT_COUNT'
@@ -36,7 +36,7 @@ describe('count actions', () => {
 
   describe('reset', () => {
     it('should dispatch RESET_COUNT', () => {
-      count.reset();
+      CountActions.reset();
 
       assert.ok(store.dispatch.calledWith({
         type: 'RESET_COUNT'
