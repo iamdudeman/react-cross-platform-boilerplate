@@ -1,4 +1,4 @@
 describe('Shared', () => {
-  require('./actions/count.test');
-  require('./reducers/count.test');
+  require('./actions/CountActions.test');
+  require('./reducers/countReducer.test');
 });

@@ -1,4 +1,4 @@
-import * as countActions from '../actions/count';
+import * as CountActions from '../actions/CountActions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
@@ -9,15 +9,18 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = () => {
   return {
-    onClickDecrement: () => countActions.decrement(),
-    onClickIncrement: () => countActions.increment(),
-    onClickReset: () => countActions.reset()
+    onClickDecrement: () => CountActions.decrement(),
+    onClickIncrement: () => CountActions.increment(),
+    onClickReset: () => CountActions.reset()
   };
 };
 
-const CounterContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-);
-
-export default CounterContainer;
+/**
+ * Container component that provides a presentational component the listed props.
+ * @property {Object} props
+ * @property {number} props.count
+ * @property {function} props.onClickDecrement
+ * @property {function} props.onClickIncrement
+ * @property {function} props.onClickReset
+ */
+export default connect(mapStateToProps, mapDispatchToProps);
