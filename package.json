@@ -6,10 +6,10 @@
   "private": true,
   "directories": {},
   "scripts": {
-    "all:test": "node node_modules/jest/bin/jest.js ./testConfig.js",
+    "all:test": "node node_modules/jest/bin/jest.js ./testConfig.js --watchAll",
     "desktop:dev": "node node_modules/electron-forge/dist/forge.js start",
     "desktop:prod": "node node_modules/electron-forge/dist/forge.js make",
-    "desktop:test": "node node_modules/jest/bin/jest.js ./desktop/src/testConfig.js",
+    "desktop:test": "node node_modules/jest/bin/jest.js ./desktop/src/testConfig.js --watchAll",
     "dev-server": "node ./dev-server/index.js",
     "native:dev": "react-native-scripts start",
     "native:prod:android": "node node_modules/exp/bin/exp.js build:android",
@@ -17,10 +17,10 @@
     "native:test": "node node_modules/jest/bin/jest.js native/src/testConfig.js",
     "native:android": "#react-native-scripts android # TODO investigate need for this?",
     "native:ios": "#react-native-scripts ios # TODO investigate need for this?",
-    "shared:test": "node node_modules/jest/bin/jest.js ./shared/src/testConfig.js",
+    "shared:test": "node node_modules/jest/bin/jest.js ./shared/src/testConfig.js --watchAll",
     "web:dev": "./node_modules/.bin/webpack -d --watch",
     "web:prod": "rm -rf ./build/web && ./node_modules/.bin/webpack -p --progress",
-    "web:test": "node node_modules/jest/bin/jest.js ./web/src/testConfig.js"
+    "web:test": "node node_modules/jest/bin/jest.js ./web/src/testConfig.js --watchAll"
   },
   "repository": {
     "type": "git",
