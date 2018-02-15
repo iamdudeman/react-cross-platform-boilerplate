@@ -1,6 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Counter presentational component.
+ *
+ * @param {Object} props
+ * @param {number} props.count
+ * @param {function} props.onClickIncrement
+ * @param {function} props.onClickDecrement
+ * @param {function} props.onClickReset
+ */
 const Counter = ({ onClickIncrement, onClickDecrement, onClickReset, count }) => (
   <div>
     <span>Count: {count}</span> <br />
