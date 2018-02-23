@@ -1,9 +1,8 @@
-const NodeBlues = require('nodeblues');
+const { Router, Server  } = require('nodeblues');
 const fs = require('fs');
 
-const database = new NodeBlues.Database();
-const router = new NodeBlues.Router();
-const server = new NodeBlues.Server(router);
+const router = new Router();
+const server = new Server(router);
 
 router.get('/:filename', (requestData, respondWith) => {
   let pathToFile = `./build/web/${requestData.pathParams.filename || 'index.html'}`;
@@ -11,8 +10,7 @@ router.get('/:filename', (requestData, respondWith) => {
 
   fs.readFile(pathToFile, 'utf8', (err, html) => {
     if (err) {
-      console.log(err);
-      respondWith(400, 'Something bad happened', 'text/plain');
+      respondWith(400, `Something bad happened [${err}]`, 'text/plain');
     } else {
       respondWith(200, html, mimeType);
     }
@@ -20,4 +18,4 @@ router.get('/:filename', (requestData, respondWith) => {
 });
 
 server.start('localhost', 1337);
-console.log('Running on localhost:1337');
+console.log('Running on localhost:1337'); // eslint-disable-line no-console

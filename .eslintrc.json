@@ -18,12 +18,20 @@
         "react"
     ],
     "rules": {
-        "import/extensions": 0,
-        "import/no-extraneous-dependencies": 0,
-        "indent": ["error", 2],
-        "linebreak-style": ["error", "unix"],
-        "no-trailing-spaces": "error",
-        "quotes": ["error", "single"],
-        "semi": ["error", "always"]
+      "brace-style": [2, "1tbs", {"allowSingleLine": true}],
+      "comma-dangle": [2, "never"],
+      "import/extensions": 0,
+      "import/no-extraneous-dependencies": 0,
+      "indent": [2, 2],
+      "keyword-spacing": 2,
+      "linebreak-style": [2, "unix"],
+      "no-trailing-spaces": 2,
+      "quotes": [2, "single"],
+      "react/prefer-es6-class": 1,
+      "semi": [2, "always"],
+      "space-before-function-paren": [2, "never"],
+      "space-infix-ops": [2, {"int32Hint": false}],
+      "spaced-comment": [2, "always"],
+      "strict": [2, "safe"]
     }
 }
