@@ -32,9 +32,7 @@ $ npm install
 
 # Current Progress
 ### In Progress
-1. Improve linting rules
-  1. command to lint whole project
-  1. commands for each platform
+*
 
 ### TODO
 1. Include PreStyle for CSS in JS for web and desktop
