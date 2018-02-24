@@ -1,5 +1,5 @@
-import CounterContainer from 'shared/containers/CounterContainer';
 import Counter from './components/Counter';
+import CounterContainer from 'shared/containers/CounterContainer';
 import React from 'react';
 
 const WebCounter = CounterContainer(Counter);

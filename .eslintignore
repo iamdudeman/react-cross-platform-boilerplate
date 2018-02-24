@@ -1,0 +1,5 @@
+node_modules
+jsdocs
+build
+.expo
+.git

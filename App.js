@@ -1,8 +1,8 @@
-import { Provider } from 'react-redux';
-import { store } from 'shared/store';
 import Counter from './native/src/components/Counter';
 import CounterContainer from 'shared/containers/CounterContainer';
+import { Provider } from 'react-redux';
 import React from 'react';
+import { store } from 'shared/store';
 
 const AppCounter = CounterContainer(Counter);
 

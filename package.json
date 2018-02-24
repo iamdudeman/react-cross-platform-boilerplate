@@ -8,7 +8,7 @@
   "scripts": {
     "all:docs": "npm run desktop:docs && npm run native:docs && npm run shared:docs && npm run web:docs",
     "all:docs:lint": "npm run desktop:docs:lint && npm run native:docs:lint && npm run shared:docs:lint && npm run web:docs:lint",
-    "all:lint": "./node_modules/.bin/eslint **/*.js",
+    "all:lint": "./node_modules/.bin/eslint . --ext .js",
     "all:test": "node node_modules/jest/bin/jest.js ./testConfig.js --watchAll",
     "desktop:dev": "node node_modules/electron-forge/dist/forge.js start",
     "desktop:docs": "node node_modules/documentation/bin/documentation.js build desktop/src/** -f md -o jsdocs/desktop/desktop.md && node node_modules/documentation/bin/documentation.js build desktop/src/** -f html -o jsdocs/desktop",

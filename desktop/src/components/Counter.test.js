@@ -1,7 +1,7 @@
-import { shallow } from 'enzyme';
 import assert from 'assert';
 import Counter from './Counter';
 import React from 'react';
+import { shallow } from 'enzyme';
 import sinon from 'sinon';
 
 describe('Counter', () => {

@@ -1,9 +1,10 @@
-import { shallow } from 'enzyme';
-import { Text } from 'react-native';
 import assert from 'assert';
 import Counter from './Counter';
 import React from 'react';
+import { shallow } from 'enzyme';
 import sinon from 'sinon';
+import { Text } from 'react-native';
+
 
 describe('Counter', () => {
   let props = {};

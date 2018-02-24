@@ -23,7 +23,7 @@ Counter.propTypes = {
   count: PropTypes.number.isRequired,
   onClickDecrement: PropTypes.func.isRequired,
   onClickIncrement: PropTypes.func.isRequired,
-  onClickReset: PropTypes.func.isRequired,
+  onClickReset: PropTypes.func.isRequired
 };
 
 export default Counter;
