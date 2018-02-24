@@ -23,7 +23,7 @@
     "native:lint": "./node_modules/.bin/eslint native/**/*.js",
     "native:prod:android": "node node_modules/exp/bin/exp.js build:android",
     "native:prod:ios": "node node_modules/exp/bin/exp.js build:ios",
-    "native:test": "node node_modules/jest/bin/jest.js native/src/testConfig.js",
+    "native:test": "node node_modules/jest/bin/jest.js native/src/testConfig.js --watchAll",
     "native:android": "#react-native-scripts android # TODO investigate need for this?",
     "native:ios": "#react-native-scripts ios # TODO investigate need for this?",
     "shared:docs": "node node_modules/documentation/bin/documentation.js build shared/src/** -f md -o jsdocs/shared/shared.md && node node_modules/documentation/bin/documentation.js build shared/src/** -f html -o jsdocs/shared",
