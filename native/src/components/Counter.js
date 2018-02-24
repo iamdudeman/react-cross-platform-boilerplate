@@ -1,4 +1,4 @@
-import { Button, Text, View, StatusBar } from 'react-native';
+import { Button, StatusBar, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 import React from 'react';
 

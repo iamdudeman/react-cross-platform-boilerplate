@@ -29,6 +29,11 @@
       "quotes": [2, "single"],
       "react/prefer-es6-class": 1,
       "semi": [2, "always"],
+      "sort-imports": [2, {
+        "ignoreCase": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+      }],
       "space-before-function-paren": [2, "never"],
       "space-infix-ops": [2, {"int32Hint": false}],
       "spaced-comment": [2, "always"],
