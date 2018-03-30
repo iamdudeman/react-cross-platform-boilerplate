@@ -1,4 +1,4 @@
-require('./shared/src/testConfig');
-require('./desktop/src/testConfig');
-require('./native/src/testConfig');
-require('./web/src/testConfig');
+require('./shared/src/testConfig.test');
+require('./desktop/src/testConfig.test');
+require('./native/src/testConfig.test');
+require('./web/src/testConfig.test');
