@@ -46,6 +46,7 @@
   "homepage": "https://github.com/iamdudeman/react-cross-platform-boilerplate#readme",
   "devDependencies": {
     "babel-core": "6.26.0",
+    "babel-eslint": "8.2.3",
     "babel-loader": "7.1.2",
     "babel-plugin-transform-async-to-generator": "6.24.1",
     "babel-preset-env": "1.6.1",
