@@ -46,6 +46,7 @@
   "homepage": "https://github.com/iamdudeman/react-cross-platform-boilerplate#readme",
   "devDependencies": {
     "babel-core": "6.26.0",
+    "babel-eslint": "8.2.3",
     "babel-loader": "7.1.2",
     "babel-plugin-transform-async-to-generator": "6.24.1",
     "babel-preset-env": "1.6.1",
@@ -60,7 +61,7 @@
     "enzyme-adapter-react-16": "1.1.1",
     "eslint": "4.16.0",
     "eslint-plugin-react": "7.5.1",
-    "eslint-plugin-react-native": "^3.2.1",
+    "eslint-plugin-react-native": "3.2.1",
     "exp": "49.0.1",
     "html-webpack-plugin": "2.30.1",
     "jest-expo": "25.0.0",
