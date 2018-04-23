@@ -32,11 +32,7 @@ $ npm install
 
 # Current Progress
 ### In Progress
-* should not have to modify multiple files to add actions/reducers
-* remove expo - feels really unreliable right now compared to using adk
-* update readme for Android and ios for regular dev flow without expo
-* update npm scripts for native dev + prod + test
-
+*
 
 ### TODO
 1. Include PreStyle for CSS in JS for web and desktop
