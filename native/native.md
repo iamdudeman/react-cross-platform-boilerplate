@@ -23,7 +23,7 @@ Native contains all the presentational components for building native ios and an
 
 ## Special Notes
 * expo must be a dependency instead of devDependency
-
+* app icon docs - https://docs.expo.io/versions/latest/guides/app-icons
 
 
 ## Dev

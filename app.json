@@ -2,11 +2,14 @@
   "expo": {
     "name": "React Cross Platform",
     "slug": "react-cross-platform",
+    "version": "1.0.0",
     "ios": {
       "bundleIdentifier": "me.solhub.reactcrossplatform"
     },
     "android": {
-      "package": "me.solhub.reactcrossplatform"
+      "package": "me.solhub.reactcrossplatform",
+      "permissions": [],
+      "versionCode": 1
     },
     "sdkVersion": "25.0.0",
     "entryPoint": "./node_modules/react-native-scripts/build/bin/crna-entry.js"
