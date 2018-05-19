@@ -36,11 +36,13 @@ $ npm install
 
 ### TODO
 1. Add some styles for the react app
-1. Include PreStyle for CSS in JS for web and desktop
-    1. PreStyle native?
+1. Include CSS in JS for web and desktop
+    1. PreStyle and possibly PreStyle native?
+    1. css-blocks?
 1. Add sonarwhal to web and desktop for accessibility linting
 1. True HMR for desktop dev
 1. Possibly remove desktop build since it's losing relevance
+  1. maybe use Proton?
 1. Docker files for windows, linux, mac?
 
 
