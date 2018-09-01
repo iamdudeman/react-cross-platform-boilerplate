@@ -6,36 +6,8 @@
   "private": true,
   "directories": {},
   "scripts": {
-    "all:docs": "npm run desktop:docs && npm run native:docs && npm run shared:docs && npm run web:docs",
-    "all:docs:lint": "npm run desktop:docs:lint && npm run native:docs:lint && npm run shared:docs:lint && npm run web:docs:lint",
-    "all:lint": "./node_modules/.bin/eslint . --ext .js",
-    "all:test": "node node_modules/jest/bin/jest.js ./testConfig.test.js --watchAll",
-    "desktop:dev": "node node_modules/electron-forge/dist/forge.js start",
-    "desktop:docs": "node node_modules/documentation/bin/documentation.js build desktop/src/** -f md -o jsdocs/desktop/desktop.md && node node_modules/documentation/bin/documentation.js build desktop/src/** -f html -o jsdocs/desktop",
-    "desktop:docs:lint": "node node_modules/documentation/bin/documentation.js lint desktop/src/**",
-    "desktop:prod": "node node_modules/electron-forge/dist/forge.js make",
-    "desktop:lint": "./node_modules/.bin/eslint desktop/**/*.js",
-    "desktop:test": "node node_modules/jest/bin/jest.js ./desktop/src/testConfig.test.js --watchAll",
-    "dev-server": "node ./dev-server/index.js",
-    "native:dev": "react-native-scripts start",
-    "native:docs": "node node_modules/documentation/bin/documentation.js build native/src/** -f md -o jsdocs/native/native.md && node node_modules/documentation/bin/documentation.js build native/src/** -f html -o jsdocs/native",
-    "native:docs:lint": "node node_modules/documentation/bin/documentation.js lint native/src/**",
-    "native:lint": "./node_modules/.bin/eslint native/**/*.js",
-    "native:prod:android": "node node_modules/exp/bin/exp.js build:android",
-    "native:prod:ios": "node node_modules/exp/bin/exp.js build:ios",
-    "native:test": "node node_modules/jest/bin/jest.js native/src/testConfig.test.js --watchAll",
-    "native:android": "#react-native-scripts android # TODO investigate need for this?",
-    "native:ios": "#react-native-scripts ios # TODO investigate need for this?",
-    "shared:docs": "node node_modules/documentation/bin/documentation.js build shared/src/** -f md -o jsdocs/shared/shared.md && node node_modules/documentation/bin/documentation.js build shared/src/** -f html -o jsdocs/shared",
-    "shared:docs:lint": "node node_modules/documentation/bin/documentation.js lint shared/src/**",
-    "shared:lint": "./node_modules/.bin/eslint shared/**/*.js",
-    "shared:test": "node node_modules/jest/bin/jest.js ./shared/src/testConfig.test.js --watchAll",
-    "web:dev": "./node_modules/.bin/webpack -d --watch",
-    "web:docs": "node node_modules/documentation/bin/documentation.js build web/src/** -f md -o jsdocs/web/web.md && node node_modules/documentation/bin/documentation.js build web/src/** -f html -o jsdocs/web",
-    "web:docs:lint": "node node_modules/documentation/bin/documentation.js lint web/src/**",
-    "web:lint": "./node_modules/.bin/eslint web/**/*.js",
-    "web:prod": "rm -rf ./build/web && ./node_modules/.bin/webpack -p --progress",
-    "web:test": "node node_modules/jest/bin/jest.js ./web/src/testConfig.test.js --watchAll"
+    "build": "webpack --mode production",
+    "temp": ""
   },
   "repository": {
     "type": "git",
@@ -45,75 +17,18 @@
   "license": "ISC",
   "homepage": "https://github.com/iamdudeman/react-cross-platform-boilerplate#readme",
   "devDependencies": {
-    "babel-core": "6.26.0",
-    "babel-eslint": "8.2.3",
-    "babel-loader": "7.1.2",
-    "babel-plugin-transform-async-to-generator": "6.24.1",
-    "babel-preset-env": "1.6.1",
-    "babel-preset-expo": "4.0.0",
-    "babel-preset-react": "6.24.1",
-    "documentation": "5.4.0",
-    "electron-compile": "6.4.2",
-    "electron-forge": "4.2.0",
-    "electron-prebuilt-compile": "1.7.11",
-    "electron-squirrel-startup": "1.0.0",
-    "enzyme": "3.3.0",
-    "enzyme-adapter-react-16": "1.1.1",
-    "eslint": "4.16.0",
-    "eslint-plugin-react": "7.5.1",
-    "eslint-plugin-react-native": "3.2.1",
-    "exp": "54.0.0",
-    "html-webpack-plugin": "2.30.1",
-    "jest-expo": "27.0.1",
-    "nodeblues": "1.3.2",
-    "react-native-scripts": "1.11.1",
-    "react-test-renderer": "16.3.1",
-    "sinon": "4.1.2",
-    "webpack": "3.8.1",
-    "webpack-bundle-analyzer": "2.9.1"
+    "@babel/core": "7.0.0",
+    "@babel/preset-env": "7.0.0",
+    "@babel/preset-react": "7.0.0",
+    "babel-loader": "8.0.0",
+    "html-webpack-plugin": "3.2.0",
+    "webpack": "4.17.1",
+    "webpack-bundle-analyzer": "2.9.1",
+    "webpack-cli": "3.1.0"
   },
   "dependencies": {
-    "expo": "27.0.0",
-    "prop-types": "15.6.1",
-    "react": "16.3.1",
-    "react-dom": "16.3.1",
-    "react-native": "0.55.4",
-    "react-redux": "5.0.6",
-    "redux": "3.7.2"
-  },
-  "jest": {
-    "preset": "jest-expo"
-  },
-  "config": {
-    "forge": {
-      "make_targets": {
-        "win32": [
-          "squirrel"
-        ],
-        "darwin": [
-          "zip"
-        ],
-        "linux": [
-          "deb",
-          "rpm"
-        ]
-      },
-      "electronPackagerConfig": {
-        "packageManager": "npm"
-      },
-      "electronWinstallerConfig": {
-        "name": "react-cross-platform-boilerplate"
-      },
-      "electronInstallerDebian": {},
-      "electronInstallerRedhat": {},
-      "github_repository": {
-        "owner": "",
-        "name": ""
-      },
-      "windowsStoreConfig": {
-        "packageName": "",
-        "name": "react-cross-platform-boilerplate"
-      }
-    }
+    "prop-types": "15.6.2",
+    "react": "16.4.2",
+    "react-dom": "16.4.2"
   }
 }
