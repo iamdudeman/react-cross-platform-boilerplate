@@ -1,8 +1,6 @@
 # TODO
-* babel + webpack
-    * new features like optional chaining
-* eslint
-    * support new babel stuff
+* add a couple extra babel plugins for neat js features
+* get async await working
 * build scripts
 * testing framework
     * sinon

@@ -1,1 +1,1 @@
-console.log('test', process.argv);
+console.log('test', process.argv); // eslint-disable-line no-console

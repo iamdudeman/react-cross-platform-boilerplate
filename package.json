@@ -7,6 +7,7 @@
   "directories": {},
   "scripts": {
     "build": "webpack --mode production",
+    "lint": "eslint . --ext .js",
     "temp": ""
   },
   "repository": {
@@ -18,9 +19,15 @@
   "homepage": "https://github.com/iamdudeman/react-cross-platform-boilerplate#readme",
   "devDependencies": {
     "@babel/core": "7.0.0",
+    "@babel/plugin-proposal-class-properties": "7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "7.0.0",
     "@babel/preset-env": "7.0.0",
     "@babel/preset-react": "7.0.0",
+    "babel-eslint": "9.0.0",
     "babel-loader": "8.0.0",
+    "eslint": "5.5.0",
+    "eslint-plugin-react": "7.11.1",
     "html-webpack-plugin": "3.2.0",
     "webpack": "4.17.1",
     "webpack-bundle-analyzer": "2.9.1",

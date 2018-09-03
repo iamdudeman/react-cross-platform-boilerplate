@@ -9,7 +9,7 @@ const WEB_DIST = path.resolve(__dirname, './dist/web');
 
 const entry = {
   app: WEB_ENTRY,
-}
+};
 
 const plugins = [
   new HtmlWebpackPlugin({
@@ -17,19 +17,20 @@ const plugins = [
     template: './webpack/web/index.template.html',
     filename: 'index.html',
     inject: 'footer',
-    minify: { collapseWhitespace: true }
+    minify: { collapseWhitespace: true },
   }),
   new BundleAnalyzerPlugin({
     analyzerMode: 'static',
+    defaultSizes: 'parsed',
+    openAnalyzer: false,
     reportFilename: 'bundleAnalyzer.html',
-    defaultSizes: 'parsed'
   }),
-]
+];
 
 const output = {
   path: WEB_DIST,
-  filename: '[name]-[hash].js'
-}
+  filename: '[name]-[hash].js',
+};
 
 const resolve = {
   alias: {
@@ -50,8 +51,8 @@ const optimization = {
         chunks: 'all',
         priority: 1,
       },
-    }
-  }
+    },
+  },
 };
 
 
@@ -62,11 +63,10 @@ const webpackModule = {
       exclude: /node_modules/,
       use: {
         loader: 'babel-loader',
-      }
+      },
     },
-
-  ]
-}
+  ],
+};
 
 module.exports = {
   entry,

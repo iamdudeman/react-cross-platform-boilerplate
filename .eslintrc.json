@@ -20,7 +20,7 @@
     ],
     "rules": {
       "brace-style": [2, "1tbs", {"allowSingleLine": true}],
-      "comma-dangle": [2, "never"],
+      "comma-dangle": [2, "always-multiline"],
       "import/extensions": 0,
       "import/no-extraneous-dependencies": 0,
       "indent": [2, 2],
