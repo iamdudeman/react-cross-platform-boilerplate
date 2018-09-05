@@ -8,7 +8,10 @@
   "scripts": {
     "build": "webpack --mode production",
     "lint": "eslint . --ext .js",
-    "temp": ""
+
+    "tempBuild": "node build-scripts/build.js web prod",
+    "tempTest": "node build-scripts/test.js web",
+    "tempLint": "node build-scripts/lint.js"
   },
   "repository": {
     "type": "git",

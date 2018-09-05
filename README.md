@@ -1,5 +1,4 @@
 # TODO
-* build scripts
 * testing framework
     * sinon
     * mocha?
