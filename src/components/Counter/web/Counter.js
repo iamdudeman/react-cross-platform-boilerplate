@@ -1,16 +1,17 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-// import PropTypes from 'prop-types';
 
-// function blah() {
-//   return Promise.resolve('async');
-// }
+function blah() {
+  return Promise.resolve('waiting for async');
+}
 
-// async function daBlah() {
-//   return await blah();
-// }
+async function daBlah() {
+  return await blah();
+}
 
 class Counter extends React.Component {
   test() {
+    console.log(daBlah()); // eslint-disable-line no-console
     null?.thing();
     null ?? console.log('null'); // eslint-disable-line no-console
     false ?? console.log('not null'); // eslint-disable-line no-console
@@ -28,7 +29,7 @@ class Counter extends React.Component {
 }
 
 Counter.propTypes = {
-
+  meh: PropTypes.string,
 };
 
 export default Counter;
