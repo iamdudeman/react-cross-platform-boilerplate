@@ -2,16 +2,23 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 function blah() {
-  return Promise.resolve('waiting for async');
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('waited for async');
+    }, 2000);
+  });
 }
 
 async function daBlah() {
-  return await blah();
+  let test = await blah();
+
+  console.log(test); // eslint-disable-line no-console
 }
 
 class Counter extends React.Component {
   test() {
-    console.log(daBlah()); // eslint-disable-line no-console
+    daBlah();
+
     null?.thing();
     null ?? console.log('null'); // eslint-disable-line no-console
     false ?? console.log('not null'); // eslint-disable-line no-console
